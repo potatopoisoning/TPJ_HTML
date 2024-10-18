@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업 리뷰 | Anonym</title>
+    <style>
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .review-list {
+            margin-top: 20px;
+        }
+
+        .review {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .review p {
+            color: #555;
+        }
+
+        .rating {
+            margin-top: 10px;
+            color: #ffb400;
+        }
+
+        .review-date {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .review-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .review-form button {
+            padding: 10px 20px;
+            background-color: #ff5252;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .review-form button:hover {
+            background-color: #e04848;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Anonym</div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="#">기업 리뷰</a></li>
+                <li><a href="#">채용 공고</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>기업 리뷰</h1>
+
+        <!-- 리뷰 목록 -->
+        <section class="review-list">
+            <div class="review">
+                <h3>회사명: 삼성전자</h3>
+                <p>대기업답게 복지와 연봉이 좋지만 업무 강도가 높습니다.</p>
+                <div class="rating">평점: ⭐⭐⭐⭐☆</div>
+                <div class="review-date">2024-10-17</div>
+            </div>
+
+            <div class="review">
+                <h3>회사명: 네이버</h3>
+                <p>자유로운 분위기와 워라밸이 좋지만 빠른 변화에 적응해야 합니다.</p>
+                <div class="rating">평점: ⭐⭐⭐⭐⭐</div>
+                <div class="review-date">2024-10-16</div>
+            </div>
+        </section>
+
+        <!-- 리뷰 작성 폼 -->
+        <section class="review-form">
+            <h2>리뷰 작성하기</h2>
+            <form action="#" method="post">
+                <input type="text" name="company" placeholder="회사명" required>
+                <textarea name="content" rows="5" placeholder="리뷰 내용을 작성하세요." required></textarea>
+                <input type="number" name="rating" min="1" max="5" placeholder="평점 (1~5)" required>
+                <button type="submit">리뷰 등록</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blind Inc. | <a href="#">개인정보 처리방침</a></p>
+    </footer>
+</body>
+</html>

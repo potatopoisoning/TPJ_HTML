@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body{
+      margin:0px;
+    }
+    header{
+      height:100px;
+      border:5px solid red;
+    }
+    nav{
+      height: 30px;
+      border:5px solid orange;
+      margin:70px 0 0 0;
+    }
+    nav ul{
+      display:flex;
+      list-style: none;
+      margin:0px;
+    }
+    section{
+      height: 500px;
+      border:5px solid green;
+      /*width:90%;*/
+    }
+    aside{
+      height: 500px;
+      width: 100px;
+      border:5px solid blue;
+    }
+    .flex_box{
+      display: flex;
+    }
+    footer{
+      height: 100px;
+      border:5px solid purple;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+      </ul>
+    </nav><!-- 웹사이트 탐색 링크 영역-->
+  </header><!--웹페이지 상단부(페이지제목,로고)-->
+  <!--div class="flex_box"-->
+    <section><!--웹페이지 본문-->
+      <table border="1" style="width: 500px; margin:100px auto">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>등록일</th>
+          </tr>
+        </thead>
+      </table>
+      <!--article>
+      </article--><!--본문 관련 주제별 영역-->
+    </section>
+    <!--aside></aside--><!--본문에 벗어나는 주제를 담는 영역(광고,기타내용)-->
+  <!--/div-->
+  <footer></footer><!--웹페이지 하단부(웹페이지 저작자정보, 고객센터 정보 등)-->
+</body>
+</html>

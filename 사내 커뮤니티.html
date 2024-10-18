@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonym</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="dhstyles.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <style>
+            .main-container {
+                /* padding: 80px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;*/
+                margin: 0 auto;
+                /* text-align: center;  */
+                width: 90%;
+                max-width: 1200px;
+            }
+            
+            .company-header {
+                justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #fff;
+    /* margin-top: 10px; */
+}               
+
+.company-details {
+    display: flex;
+    align-items: flex-end; /* 이미지와 텍스트 수직 가운데 정렬 */
+    gap: 10px; /* 이미지와 텍스트 사이 간격 */
+}
+
+.company-logo {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.company-info h1 {
+    margin-bottom: 5px;
+}
+
+.review-btn {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+    main nav{
+
+        border-bottom: 1px solid #ddd;
+    }
+
+.tab-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.tab-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.tab-menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.recommend-btn {
+    /* background-color: #4CAF50; 버튼 배경색 */
+    color: white; /* 버튼 글자색 */
+    border: none; /* 테두리 제거 */
+    padding: 10px 20px; /* 위아래, 좌우 패딩 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block; /* 인라인 블록으로 설정 */
+    font-size: 16px; /* 글자 크기 */
+    margin: 4px 2px; /* 여백 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
+}
+
+.recommend-btn:hover {
+    background-color: #45a049; /* 마우스 오버 시 배경색 변화 */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#postForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#postForm button:hover {
+    background-color: #0056b3;
+}
+
+.post-list {
+    margin-top: 20px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+}
+
+.comment {
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #007bff;
+}
+
+.comment-form {
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+        </style>
+    </head>
+    <body>
+        <!-- 헤더: 네비게이션 바 -->
+        <header>
+            <div class="navbar">
+                <div class="logo">Anonym</div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">기업 리뷰</a></li>
+                        <li><a href="#">채용 공고</a></li>
+                        <li><a href="#">기업 서비스</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <main>
+            <div class="main-container">
+                <section class="company-header">
+                    <div class="company-details">
+                        <img src="potato.jpeg" alt="회사 로고" class="company-logo">
+                        <div class="company-info">
+                            <h1>영풍정밀</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="review-btn">이 회사 리뷰하기</button>
+                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=85608&format=png&color=000000"></button>
+                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=87695&format=png&color=000000"></button>
+                    </div>
+                </section>
+                
+                <nav class="tab-menu">
+                    <a href="#">소개</a>
+                    <a href="#">리뷰</a>
+                    <a href="#" class="active">커뮤니티</a>
+                </nav>
+                
+                <div class="container">
+                    <h1>직원 전용 게시판</h1>
+                    <form id="postForm">
+                        <div class="form-group">
+                            <label for="postTitle">게시글 제목:</label>
+                            <input type="text" id="postTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postContent">게시글 내용:</label>
+                            <textarea id="postContent" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">게시글 작성</button>
+                    </form>
+                    <div id="postList" class="post-list"></div>
+                </div>
+
+                </section>
+            </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <p>&copy; 2024 Blind Inc. | <a href="#">개인정보 처리방침</a></p>
+        </footer>
+    </body>
+</html>

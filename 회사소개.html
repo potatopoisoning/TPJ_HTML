@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonym</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="dhstyles.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <style>
+main{
+    background-color: #f6f7fa; 
+}
+
+.main-container {
+    /* padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+    margin: 0 auto;
+    /* text-align: center;  */
+    width: 90%;
+    max-width: 1200px;
+    background-color: #f6f7fa;
+}
+
+.company-header {
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    /* margin-top: 10px; */
+}               
+
+.company-details {
+    display: flex;
+    align-items: flex-end; /* 이미지와 텍스트 수직 가운데 정렬 */
+    gap: 10px; /* 이미지와 텍스트 사이 간격 */
+}
+
+.company-logo {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.company-info h1 {
+    margin-bottom: 5px;
+}
+
+.review-btn {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+    main nav{
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        margin-bottom: 30px;
+    }
+
+.tab-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.tab-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.tab-menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.review-summary {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.left, .right {
+    width: 45%;
+}
+
+.rating-bars {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.rating-bars li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bar {
+    width: 80%;
+    height: 8px;
+    background-color: #ddd;
+    margin-left: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: #007bff;
+}
+
+.right ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.right li {
+    margin-bottom: 8px;
+}
+
+.content-wrapper3 {
+    border: 1px solid #ddd;  /* 바깥 테두리 */
+    /* border-radius: 8px;       모서리 둥글게 */
+    padding: 40px;
+    width: 100%;
+}
+
+.content-wrapper2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #ddd;  /* 바깥 테두리 */
+    /* border-radius: 8px;       모서리 둥글게 */
+    padding: 40px;
+    width: 100%;
+    position: relative; 
+    /* height: 300px; */
+}
+
+.left, .right {
+    width: 48%;               /* 좌우 공간 균등 배분 */
+}
+
+.vertical-line {
+    width: 1px;
+    background-color: #ddd;
+    height: 100%;
+    margin: 0 10px; /* 좌우 공간 확보 */
+}
+
+.recommend-btn {
+    /* background-color: #4CAF50; 버튼 배경색 */
+    color: white; /* 버튼 글자색 */
+    border: none; /* 테두리 제거 */
+    padding: 10px 20px; /* 위아래, 좌우 패딩 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block; /* 인라인 블록으로 설정 */
+    font-size: 16px; /* 글자 크기 */
+    margin: 4px 2px; /* 여백 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
+}
+
+.recommend-btn:hover {
+    background-color: #45a049; /* 마우스 오버 시 배경색 변화 */
+}
+.company-card {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border: solid 1px #ddd;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 30px;
+  margin-bottom: 20px;
+}
+
+.info-grid div {
+  font-size: 14px;
+  color: #555;
+}
+
+.info-grid a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-grid a:hover {
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+        </style>
+    </head>
+    <body>
+        <!-- 헤더: 네비게이션 바 -->
+        <header>
+            <div class="navbar">
+                <div class="logo">Anonym</div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">기업 리뷰</a></li>
+                        <li><a href="#">채용 공고</a></li>
+                        <li><a href="#">기업 서비스</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <main>
+            <div style="background-color: #fff;">
+                <section class="company-header">
+                    <div class="company-details">
+                        <img src="potato.jpeg" alt="회사 로고" class="company-logo">
+                        <div class="company-info">
+                            <h1>영풍정밀</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="review-btn">이 회사 리뷰하기</button>
+                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=85608&format=png&color=000000"></button>
+                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=87695&format=png&color=000000"></button>
+                    </div>
+                </section>
+            </div>
+
+                <nav>
+                    <div class="tab-menu">
+                        <a href="#"  class="active">소개</a>
+                        <a href="#">리뷰</a>
+                        <a href="#">커뮤니티</a>
+                    </div>
+                </nav>
+                
+            <div class="main-container">
+                <section class="review-summary">
+                    <div class="company-card">
+                        <h2>풀무원 회사소개</h2>
+                        <div class="info-grid">
+                            <div><strong>본사</strong> 충청북도 음성군</div>
+                            <div><strong>업계</strong> 식음료 제조업</div>
+                            <div><strong>직원수</strong> 201~500(명)</div>
+                            <div><strong>설립</strong> 1984</div>
+                        </div>
+                      </div>
+            </div>
+            </section>
+                
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <p>&copy; 2024 Blind Inc. | <a href="#">개인정보 처리방침</a></p>
+        </footer>
+    </body>
+</html>
