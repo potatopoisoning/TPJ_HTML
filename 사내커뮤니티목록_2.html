@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인천환경공단 게시글</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.keywords {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e9ecef;
+}
+
+.tabs button.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+  border: 1px solid #ddd;
+  padding: 25px 40px;
+  background-color: white;
+}
+
+.post-item {
+  padding: 15px;
+  background-color: white;
+  /* border: 1px solid #ddd; */
+  border-bottom: 1px solid #ddd;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item.important {
+  /* border-left: 5px solid red; */
+}
+
+.post-info {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.date {
+  margin-left: auto;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>인천환경공단 게시글</h1>
+
+    <div class="search-container">
+      <input type="text" placeholder="연령, 면접 등 키워드로 검색해보세요.">
+      <div class="keywords">추천 키워드: <span>인천환경공단</span></div>
+    </div>
+
+    <div class="tabs">
+      <button class="active">인기순</button>
+      <button>최신순</button>
+    </div>
+
+    <div class="post-list">
+      <div class="post-item">
+        <h2>인천환경공단..</h2>
+        <p>인천환경공단 환경직 지원했는데 필기시험 난이도가 어떻게 될까요?? 아시는 분 있나요.</p>
+        <div class="post-info">
+          <span>👁️ 679</span>
+          <span>💬 4</span>
+          <span>📌 3</span>
+          <span class="date">2022.06.02.</span>
+        </div>
+      </div>
+
+      <div class="post-item">
+        <h2>인천환경공단 8급</h2>
+        <p>기술쪽? 친구가 물었는데 궁금한게 있어서 댓글주시면 쪽지드릴게요 ㅠ</p>
+        <div class="post-info">
+          <span>👁️ 2,084</span>
+          <span>💬 1</span>
+          <span>📌 0</span>
+          <span class="date">2020.06.16.</span>
+        </div>
+      </div>
+
+      <div class="post-item">
+        <h2>인천환경공단 보건관리</h2>
+        <p>재판 보건관리 직무 빡빡해요... 위협물질, 허수처리 이런걸로 인해서 확인해야 할 것도 많은 거 같긴한데..</p>
+        <div class="post-info">
+          <span>👁️ 148</span>
+          <span>💬 1</span>
+          <span>📌 6</span>
+          <span class="date">09.07</span>
+        </div>
+      </div>
+
+      <div class="post-item important">
+        <h2>한전KPS vs 인천환경공단</h2>
+        <p>이직 준비하시는 분들이 두 군데 관심있어서 현직자 분들 의견 궁금해서 글올려봅니다...</p>
+        <div class="post-info">
+          <span>👁️ 1,894</span>
+          <span>💬 37</span>
+          <span>📌 1</span>
+          <span class="date">2021.08.30.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 디자인</title>
+  <style>
+    /* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 컨테이너 스타일 */
+.post-container {
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* 게시글 헤더 */
+.post-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.post-header h2 {
+  margin-bottom: 5px;
+}
+
+.post-info span {
+  margin-right: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* 본문 섹션 */
+.post-content p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.tags span {
+  display: inline-block;
+  background-color: #e7f3ff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-top: 5px;
+}
+
+/* 버튼 섹션 */
+.post-actions {
+  margin: 15px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.post-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* 댓글 섹션 */
+.comments-section h3 {
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.comment-input input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* 댓글 목록 */
+.comment-list .comment {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+.comment-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.comment-footer span {
+  color: #777;
+  font-size: 12px;
+}
+
+.comment-footer button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.comment-footer button:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="post-container">
+  <!-- 게시글 정보 -->
+  <div class="post-header">
+    <h2>인천환경공단..</h2>
+    <div class="post-info">
+      <span>세희사 C*****</span>
+      <span>2022.06.02</span>
+      <span>조회수 679</span>
+      <span>댓글 3</span>
+    </div>
+  </div>
+
+  <!-- 게시글 본문 -->
+  <div class="post-content">
+    <p>인천환경공단 환경직 지원했는데 필기시험 난이도가 어떻게 될까요?? 아시는 분 있나요.</p>
+    <div class="tags">
+      <span>#인천환경공단</span>
+    </div>
+  </div>
+
+  <!-- 버튼 섹션 -->
+  <div class="post-actions">
+    <button>좋아요 4</button>
+    <button>댓글 3</button>
+  </div>
+
+  <!-- 댓글 섹션 -->
+  <div class="comments-section">
+    <h3>댓글 3</h3>
+    <div class="comment-input">
+      <input type="text" placeholder="댓글을 남겨주세요." />
+    </div>
+
+    <!-- 댓글 목록 -->
+    <div class="comment-list">
+      <div class="comment">
+        <span class="comment-author">인천환경공단 - *****</span>
+        <p>수질 대기 폐기물 나왔다고 들었음 기사 난이도로</p>
+        <div class="comment-footer">
+          <span>2022.06.02</span>
+          <button>좋아요 2</button>
+        </div>
+      </div>
+
+      <div class="comment">
+        <span class="comment-author">세희사 - *****</span>
+        <p>감사합니다</p>
+        <div class="comment-footer">
+          <span>2022.06.02</span>
+          <button>좋아요 1</button>
+        </div>
+      </div>
+
+      <div class="comment">
+        <span class="comment-author">한국기술공사 - *****</span>
+        <p>NCS는 어떤 식으로 나오나요? 후기가 없네요..ㅠ</p>
+        <div class="comment-footer">
+          <span>2022.11.21</span>
+          <button>좋아요 0</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
