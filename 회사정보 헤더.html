@@ -194,11 +194,27 @@ main nav{
 
 .black-section {
     background-color: #696969 ;
-    color: white;
+    /* color: white; */
     text-align: center;
-    padding: 40px 0;
+    /* padding: 20px 0; */
     /* margin-bottom: 20px; */
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+    background: url(https://static.teamblind.com/img/www/bg-company.jpg) 50% 0 no-repeat;
+    background-size: cover;
 }
+.black-section::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    content: '';
+}
+
 
 .black-section h1 {
     font-size: 32px;
@@ -237,8 +253,8 @@ main nav{
         <!-- 메인 컨텐츠 -->
         <main>
             <section class="black-section">
-                <h1>기업 정보 플랫폼</h1>
-                <p>투명한 기업 리뷰와 채용 정보를 제공합니다.</p>
+                <!-- <h1>기업 정보 플랫폼</h1>
+                <p>투명한 기업 리뷰와 채용 정보를 제공합니다.</p> -->
             </section>
         
             <section>

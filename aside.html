@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리뷰 페이지</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    padding: 20px;
+    font-family: 'Roboto', 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.review-section {
+    flex: 3;
+    margin-right: 20px;
+    width: 800px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 3;
+}
+
+.average-rating {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffab00;
+}
+
+.stars {
+    color: #ffab00;
+}
+
+.category-rating ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.review-header {
+    margin-bottom: 15px;
+}
+
+.review-content h3 {
+    margin-top: 10px;
+}
+
+.review-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    
+}
+
+.ad-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 각 section 간 간격 */
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ad button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.ad button:hover {
+    background-color: #0056b3;
+}
+
+.related-companies-section h2 {
+    padding: 16px 18px 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.related-companies {
+    list-style-type: none;
+    padding: 0;
+}
+.related-companies-section {
+    flex: 1;
+    background-color: #fff;
+    /* padding: 20px; */
+    border: 1px solid #ddd;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; 각 section 간 간격 */
+    width: 300px;
+}
+
+.related-companies li {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 5px; */
+    padding: 16px 20px 17px;
+    font-size: 13px;
+    border-bottom: 1px solid #eff1f5;
+}
+
+.ad p{
+    margin-top: 8px;
+    font-size: 12.5px;
+    line-height: 1.38em;
+    letter-spacing: -1px;
+}
+
+.ad h2{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ad a{
+    display: inline-block;
+    width: 100%;
+    height: 38px;
+    margin-top: 16px;
+    border: 1px solid #37acc9;
+    border-radius: 4px;
+    color: #37acc9;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 38px;
+    text-decoration: none;
+}
+
+.related-companies li a{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 36px;
+    padding-left: 44px;
+}
+
+.related-companies li a .img{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: url(https://static.teamblind.com/img/www/sp-cmp.png?time=oct2020) no-repeat;
+    background-size: 245.76px 327.68px;
+    background-position: -64px -37.76px;
+}
+.related-companies li a .star{
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #222;
+    line-height: 1.3em;
+    vertical-align: top;
+}
+.related-companies li a strong{
+    font-weight: 700;
+    line-height: 1.4em;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main class="review-section">
+      <div class="header">
+        <h1>국세청 리뷰</h1>
+        <div class="rating-summary">
+          <span class="average-rating">2.4</span>
+          <div class="stars">★★☆☆☆</div>
+          <p>1,438개 리뷰</p>
+        </div>
+        <div class="category-rating">
+          <p>항목별 평점</p>
+          <ul>
+            <li>커리어 향상: <span>3.3</span></li>
+            <li>업무와 삶의 균형: <span>2.4</span></li>
+            <li>급여 및 복지: <span>1.7</span></li>
+            <li>사내 문화: <span>2.3</span></li>
+            <li>경영진: <span>1.8</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="rating">2.0</span>
+          <span class="title">“다른 직렬에 합격했다면 오지 않아야 할 곳”</span>
+          <p>작성자: 익명 | 직렬: 세무·자무 전문가 | 2021.04.23</p>
+        </div>
+        <div class="review-content">
+          <h3>장점</h3>
+          <ul>
+            <li>직업 안정성, 월급이 밀리지 않는다.</li>
+            <li>10년 근무하면 세무사 시험 1차 면제.</li>
+          </ul>
+
+          <h3>단점</h3>
+          <ul>
+            <li>업무 매뉴얼이 없어 실무자가 알아서 헤쳐 나가야 함.</li>
+            <li>워라밸이 부족하며 업무량이 많음.</li>
+            <li>조직 문화가 경직되어 있음.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+        <section class="ad-section">
+          <div class="ad">
+            <h2>해당 기업의 인사담당자이신가요?</h2>
+            <p>
+                채용 고민과 브랜딩 전략,<br>
+                모두 블라인드 기업서비스와 함께면 간단해집니다.<br>
+                지금 바로 시작하세요!<br>
+            </p>
+            <a href="">블라인드 기업서비스 알아보기</a>
+          </div>
+        </section>
+      
+        <section class="related-companies-section">
+          <h2>국가/공공기관 회사</h2>
+          <ul class="related-companies">
+            <li>
+                <a>
+                    <span class="img">
+                        <img src="" alt="">
+                    </span>
+                    <div>
+                        <strong>한국서부발전</strong>
+                    </div>
+                     <span class="star">★ 3.8</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="img">
+                        <img src="" alt="">
+                    </span>
+                    <div>
+                        <strong>한국도로공사</strong>
+                    </div>
+                     <span class="star">★ 3.6</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="img">
+                        <img src="" alt="">
+                    </span>
+                    <div>
+                        <strong>서울교통공사</strong>
+                    </div>
+                     <span class="star">★ 3.2</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="img">
+                        <img src="" alt="">
+                    </span>
+                    <div>
+                        <strong>한국가스기술공사</strong>
+                    </div>
+                     <span class="star">★ 3.1</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="img">
+                        <img src="" alt="">
+                    </span>
+                    <div>
+                        <strong>보험공단</strong>
+                    </div>
+                     <span class="star">★ 2.8</span>
+                </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+  </div>
+</body>
+</html>

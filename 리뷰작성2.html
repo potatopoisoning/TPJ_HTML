@@ -1,259 +1,179 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anonym</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- <link rel="stylesheet" href="dhstyles.css" /> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰 등록</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <script src="jquery-3.7.1.js"></script>
-        <style>
-            .main-container {
-                /* padding: 80px 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;*/
-                margin: 0 auto;
-                /* text-align: center;  */
-                width: 90%;
-                max-width: 1200px;
-            }
-            
-            .company-header {
-                justify-content: space-between;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    background-color: #fff;
-    /* margin-top: 10px; */
-}               
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f7fa;
+            margin: 0;
+            padding: 20px;
+        }
 
-.company-details {
-    display: flex;
-    align-items: flex-end; /* 이미지와 텍스트 수직 가운데 정렬 */
-    gap: 10px; /* 이미지와 텍스트 사이 간격 */
-}
+        .review-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.company-logo {
-    width: 120px;
-    height: 120px;
-    margin-right: 20px;
-}
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.company-info h1 {
-    margin-bottom: 5px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.review-btn {
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-    main nav{
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
-        border-bottom: 1px solid #ddd;
-    }
+        .stars {
+            display: flex;
+            gap: 5px;
+        }
 
-.tab-menu {
-    display: flex;
-    justify-content: space-around;
-    background-color: #fff;
-    padding: 10px 0;
-    margin-top: 10px;
-}
+        .star input {
+            display: none;
+        }
 
-.tab-menu a {
-    text-decoration: none;
-    color: #333;
-}
+        .star label {
+            font-size: 24px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
 
-.tab-menu .active {
-    font-weight: bold;
-    border-bottom: 2px solid #007bff;
-}
+        .star input:checked ~ label {
+            color: #007bff;
+        }
 
-.recommend-btn {
-    /* background-color: #4CAF50; 버튼 배경색 */
-    color: white; /* 버튼 글자색 */
-    border: none; /* 테두리 제거 */
-    padding: 10px 20px; /* 위아래, 좌우 패딩 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    text-decoration: none; /* 밑줄 제거 */
-    display: inline-block; /* 인라인 블록으로 설정 */
-    font-size: 16px; /* 글자 크기 */
-    margin: 4px 2px; /* 여백 설정 */
-    cursor: pointer; /* 커서 모양 변경 */
-    border-radius: 5px; /* 모서리 둥글게 */
-    transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
-}
+        .star input:checked + label:hover,
+        .star input:checked ~ label:hover {
+            color: #0056b3;
+        }
 
-.recommend-btn:hover {
-    background-color: #45a049; /* 마우스 오버 시 배경색 변화 */
-}
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
+        textarea {
+            height: 80px;
+            resize: none;
+        }
 
-.form-group {
-    margin-bottom: 15px;
-}
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
-input[type="text"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+<div class="review-form">
+    <h2>리뷰 등록</h2>
 
-#reviewForm button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
+    <form action="#" method="POST">
 
-#reviewForm button:hover {
-    background-color: #218838;
-}
+        <!-- 제목 입력 -->
+        <div class="form-group">
+            <label for="review-title">제목</label>
+            <input type="text" id="review-title" name="review_title" placeholder="리뷰 제목을 입력하세요" required />
+        </div>
 
-.review-list {
-    margin-top: 20px;
-}
-
-.review {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f8f8f8;
-}
-
-        </style>
-        <script>
-            document.getElementById("reviewForm").addEventListener("submit", function(event) {
-                event.preventDefault(); // 기본 제출 동작 방지
-
-                // 입력값 가져오기
-                const companyName = document.getElementById("companyName").value;
-                const reviewTitle = document.getElementById("reviewTitle").value;
-                const reviewContent = document.getElementById("reviewContent").value;
-                const rating = document.getElementById("rating").value;
-
-                // 리뷰 생성
-                const review = document.createElement("div");
-                review.classList.add("review");
-                review.innerHTML = `
-                    <h3>${reviewTitle} (평점: ${rating})</h3>
-                    <p><strong>기업 이름:</strong> ${companyName}</p>
-                    <p>${reviewContent}</p>
-                `;
-
-                // 리뷰 리스트에 추가
-                document.getElementById("reviewList").appendChild(review);
-
-                // 입력 필드 초기화
-                document.getElementById("reviewForm").reset();
-            });
-        </script>
-    </head>
-    <body>
-        <!-- 헤더: 네비게이션 바 -->
-        <header>
-            <div class="navbar">
-                <div class="logo">Anonym</div>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="#">자유게시판</a></li>
-                        <li><a href="#">기업 리뷰</a></li>
-                        <li><a href="#">채용 공고</a></li>
-                        <li><a href="#">기업 서비스</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="login.html">로그인</a></li>
-                        <li><a href="join.html">회원가입</a></li>
-                    </ul>
-                </nav>
-            </div>    
-        </header>
-
-        <!-- 메인 컨텐츠 -->
-        <main>
-            <div class="main-container">
-                <section class="company-header">
-                    <div class="company-details">
-                        <img src="potato.jpeg" alt="회사 로고" class="company-logo">
-                        <div class="company-info">
-                            <h1>영풍정밀</h1>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="review-btn">이 회사 리뷰하기</button>
-                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=85608&format=png&color=000000"></button>
-                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=87695&format=png&color=000000"></button>
-                    </div>
-                </section>
-                
-                <nav class="tab-menu">
-                    <a href="#">소개</a>
-                    <a href="#" class="active">리뷰</a>
-                    <a href="#">커뮤니티</a>
-                </nav>
-                
-                <h1>기업 리뷰 작성</h1>
-        <form id="reviewForm">
-            <div class="form-group">
-                <label for="companyName">기업 이름:</label>
-                <input type="text" id="companyName" required>
+        <!-- 커리어 향상 별점 -->
+        <div class="form-group">
+            <label>커리어 향상</label>
+            <div class="stars">
+                <div class="star">
+                    <input type="radio" id="career-1" name="career" value="1" required />
+                    <label for="career-1"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="career-2" name="career" value="2" />
+                    <label for="career-2"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="career-3" name="career" value="3" />
+                    <label for="career-3"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="career-4" name="career" value="4" />
+                    <label for="career-4"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="career-5" name="career" value="5" />
+                    <label for="career-5"><i class="fas fa-star"></i></label>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="reviewTitle">리뷰 제목:</label>
-                <input type="text" id="reviewTitle" required>
-            </div>
-            <div class="form-group">
-                <label for="reviewContent">리뷰 내용:</label>
-                <textarea id="reviewContent" rows="5" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="rating">평점:</label>
-                <select id="rating" required>
-                    <option value="">선택하세요</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button type="submit">리뷰 제출</button>
-        </form>
-        <div id="reviewList" class="review-list"></div>
-            </div>
-        </main>
+        </div>
 
-        <!-- 푸터 -->
-        <footer class="footer">
-            <p>&copy; 2024 Blind Inc. | <a href="#">개인정보 처리방침</a></p>
-        </footer>
-    </body>
+        <!-- 업무와 삶의 균형 별점 -->
+        <div class="form-group">
+            <label>업무와 삶의 균형</label>
+            <div class="stars">
+                <div class="star">
+                    <input type="radio" id="balance-1" name="balance" value="1" required />
+                    <label for="balance-1"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="balance-2" name="balance" value="2" />
+                    <label for="balance-2"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="balance-3" name="balance" value="3" />
+                    <label for="balance-3"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="balance-4" name="balance" value="4" />
+                    <label for="balance-4"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="star">
+                    <input type="radio" id="balance-5" name="balance" value="5" />
+                    <label for="balance-5"><i class="fas fa-star"></i></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 장점 입력 -->
+        <div class="form-group">
+            <label for="advantages">장점</label>
+            <textarea id="advantages" name="advantages" placeholder="장점을 작성하세요" required></textarea>
+        </div>
+
+        <!-- 단점 입력 -->
+        <div class="form-group">
+            <label for="disadvantages">단점</label>
+            <textarea id="disadvantages" name="disadvantages" placeholder="단점을 작성하세요" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">리뷰 등록</button>
+    </form>
+</div>
+
+</body>
 </html>

@@ -12,219 +12,103 @@ main{
     background-color: #f6f7fa; 
 }
 
+/* 회사 배너 */
+.black-section {
+    background-color: #696969 ;
+    /* color: white; */
+    text-align: center;
+    /* padding: 20px 0; */
+    /* margin-bottom: 20px; */
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+    background: url(https://static.teamblind.com/img/www/bg-company.jpg) 50% 0 no-repeat;
+    background-size: cover;
+}
+
+.black-section::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    content: '';
+}
+
+/* .black-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.black-section p {
+    font-size: 18px;
+    margin: 0;
+} */
+
+/* section(왼) + aside(오) */
 .main-container {
-    /* padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;*/
-    /* text-align: center;  */
     display: flex;
     max-width: 1100px;
     margin: 0 auto;
     background-color: #f6f7fa;
 }
 
-.company-header {
+/* section(왼) */
+.company-section {
+    display: flex;
     justify-content: space-between;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    background-color: #fff;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px;
-    /* margin-top: 10px; */
-}               
-
-.company-details {
-    display: flex;
-    align-items: flex-end; /* 이미지와 텍스트 수직 가운데 정렬 */
-    gap: 10px; /* 이미지와 텍스트 사이 간격 */
-}
-
-.company-logo {
-    width: 120px;
-    height: 120px;
+    /* background-color: #fff; */
+    margin-bottom: 30px;
+    flex: 3;
     margin-right: 20px;
 }
 
-.company-info h1 {
-    margin-bottom: 5px;
-}
-
-.review-btn {
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-    main nav{
-        border-bottom: 1px solid #ddd;
-        background-color: #fff;
-        margin-bottom: 30px;
-    }
-
-.tab-menu {
-    display: flex;
-    justify-content: space-around;
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px;
-}
-
-.tab-menu a {
-    text-decoration: none;
-    color: #333;
-}
-
-.tab-menu .active {
-    font-weight: bold;
-    border-bottom: 2px solid #007bff;
-}
-
-.review-summary {
-    display: flex;
-    justify-content: space-between;
-    /* padding: 20px; */
-    background-color: #fff;
-    margin-bottom: 30px;
-    flex: 3;
-}
-
-.left, .right {
-    width: 45%;
-}
-
-.rating-bars {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.rating-bars li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.bar {
-    width: 80%;
-    height: 8px;
-    background-color: #ddd;
-    margin-left: 10px;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.fill {
-    height: 100%;
-    background-color: #007bff;
-}
-
-.right ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.right li {
-    margin-bottom: 8px;
-}
-
-.content-wrapper3 {
-    border: 1px solid #ddd;  /* 바깥 테두리 */
-    /* border-radius: 8px;       모서리 둥글게 */
-    padding: 40px;
-    width: 100%;
-}
-
-.content-wrapper2 {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    border: 1px solid #ddd;  /* 바깥 테두리 */
-    /* border-radius: 8px;       모서리 둥글게 */
-    padding: 40px;
-    width: 100%;
-    position: relative; 
-    /* height: 300px; */
-}
-
-.left, .right {
-    width: 48%;               /* 좌우 공간 균등 배분 */
-}
-
-.vertical-line {
-    width: 1px;
-    background-color: #ddd;
-    height: 100%;
-    margin: 0 10px; /* 좌우 공간 확보 */
-}
-
-.recommend-btn {
-    /* background-color: #4CAF50; 버튼 배경색 */
-    color: white; /* 버튼 글자색 */
-    border: none; /* 테두리 제거 */
-    padding: 10px 20px; /* 위아래, 좌우 패딩 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    text-decoration: none; /* 밑줄 제거 */
-    display: inline-block; /* 인라인 블록으로 설정 */
-    font-size: 16px; /* 글자 크기 */
-    margin: 4px 2px; /* 여백 설정 */
-    cursor: pointer; /* 커서 모양 변경 */
-    border-radius: 5px; /* 모서리 둥글게 */
-    transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
-}
-
-.recommend-btn:hover {
-    background-color: #45a049; /* 마우스 오버 시 배경색 변화 */
-}
 .company-card {
-  width: 100%;
-  background-color: white;
-  padding: 20px;
-  border: solid 1px #ddd;
-}
-
-h2 {
-  margin-bottom: 16px;
-  font-size: 24px;
-  color: #333;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 30px;
+  overflow: hidden;
+  position: relative;
   margin-bottom: 20px;
+  padding: 25px 40px 30px;
+  border: 1px solid #dfe1e4;
+  background-color: #fff;
+  width: 100%;
+  height: 176.75px;
 }
 
-.info-grid div {
-  font-size: 14px;
-  color: #555;
+.company-card h1 {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33em;
 }
 
-.info-grid a {
-  color: #007bff;
-  text-decoration: none;
+.company-card ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 8px;
+    list-style: none;
+}
+.company-card ul li {
+    position: relative;
+    padding: 4px 10px 4px 98px;
+    line-height: 1.7em;
+    font-weight: 400;
+    color: #000;
+}
+.company-card ul li strong {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 98px;
+    font-weight: 400;
+    color: #94969b;
 }
 
-.info-grid a:hover {
-  text-decoration: underline;
-}
-
-.description {
-  font-size: 14px;
-  color: #444;
-  line-height: 1.6;
-}
-
+/* aside(오) */
 .ad-section {
     flex: 1;
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     height: fit-content;
@@ -263,19 +147,16 @@ h2 {
 .related-companies-section {
     flex: 1;
     background-color: #fff;
-    /* padding: 20px; */
     border: 1px solid #ddd;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    /* gap: 20px; 각 section 간 간격 */
     width: 300px;
 }
 
 .related-companies li {
     display: flex;
     justify-content: space-between;
-    /* margin-bottom: 5px; */
     padding: 16px 20px 17px;
     font-size: 13px;
     border-bottom: 1px solid #eff1f5;
@@ -348,7 +229,8 @@ h2 {
         </style>
     </head>
     <body>
-        <!-- 헤더: 네비게이션 바 -->
+
+        <!-- 헤더 -->
         <header>
             <div class="navbar">
                 <div class="logo">Anonym</div>
@@ -369,70 +251,91 @@ h2 {
             </div>    
         </header>
 
-        <!-- 메인 컨텐츠 -->
+        <!-- 메인 -->
         <main>
+
+            <section class="black-section">
+                <!-- <h1>기업 정보 플랫폼</h1>
+                <p>투명한 기업 리뷰와 채용 정보를 제공합니다.</p> -->
+            </section>
+
             <div style="background-color: #fff;">
                 <section class="company-header">
                     <div class="company-details">
                         <img src="potato.jpeg" alt="회사 로고" class="company-logo">
                         <div class="company-info">
                             <h1>영풍정밀</h1>
+                            <div>
+                                <button class="recommend-btn g"><img src="https://img.icons8.com/?size=100&id=85608&format=png&color=46b7bd"></button>
+                                <button class="recommend-btn b"><img src="https://img.icons8.com/?size=100&id=87695&format=png&color=fb5757"></button>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <button class="review-btn">이 회사 리뷰하기</button>
-                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=85608&format=png&color=000000"></button>
-                        <button class="recommend-btn"><img src="https://img.icons8.com/?size=100&id=87695&format=png&color=000000"></button>
                     </div>
                 </section>
             </div>
 
-                <nav>
-                    <div class="tab-menu">
-                        <a href="#"  class="active">소개</a>
-                        <a href="#">리뷰</a>
-                        <a href="#">커뮤니티</a>
-                    </div>
-                </nav>
-                
+            <nav>
+                <div class="tab-menu">
+                    <a href="#" class="active">소개</a>
+                    <a href="#">리뷰</a>
+                    <a href="#">커뮤니티</a>
+                </div>
+            </nav>
+
             <div class="main-container">
-                <section class="review-summary">
+                <section class="company-section">
                     <div class="company-card">
-                        <h2>풀무원 회사소개</h2>
-                        <div class="info-grid">
-                            <div><strong>본사</strong> 충청북도 음성군</div>
-                            <div><strong>업계</strong> 식음료 제조업</div>
-                            <div><strong>직원수</strong> 201~500(명)</div>
-                            <div><strong>설립</strong> 1984</div>
-                        </div>
+                        <h1>풀무원 회사소개</h1>
+                        <ul>
+                            <li>
+                                <strong>본사</strong>
+                                충청북도 음성군
+                            </li>
+                            <li>
+                                <strong>업계</strong>
+                                식음료 제조업
+                            </li>
+                            <li>
+                                <strong>직원수</strong>
+                                201~500(명)
+                            </li>
+                            <li>
+                                <strong>설립</strong>
+                                1984
+                            </li>
+                        </ul>
                     </div>
-                    <aside class="sidebar">
-                        <section class="ad-section">
-                          <div class="ad">
+                </section>
+                <!-- aside -->
+                <aside class="sidebar">
+                    <section class="ad-section">
+                        <div class="ad">
                             <h2>해당 기업의 인사담당자이신가요?</h2>
                             <p>
                                 채용 고민과 브랜딩 전략,<br>
                                 모두 블라인드 기업서비스와 함께면 간단해집니다.<br>
                                 지금 바로 시작하세요!<br>
                             </p>
-                            <a href="">블라인드 기업서비스 알아보기</a>
+                            <a href="">블라인드 기업서비스 바로가기</a>
                         </div>
-                        </section>
-                      
-                        <section class="related-companies-section">
-                            <h2>국가/공공기관 회사</h2>
-                            <ul class="related-companies">
-                                <li>
-                                    <a>
-                                        <span class="img">
-                                        <img src="" alt="">
-                                    </span>
-                                    <div>
-                                        <strong>한국서부발전</strong>
-                                    </div>
-                                     <span class="star">★ 3.8</span>
-                                    </a>
-                                </li>
+                    </section>
+                    <section class="related-companies-section">
+                        <h2>국가/공공기관 회사</h2>
+                        <ul class="related-companies">
+                            <li>
+                                <a>
+                                    <span class="img">
+                                    <img src="" alt="">
+                                </span>
+                                <div>
+                                    <strong>한국서부발전</strong>
+                                </div>
+                                    <span class="star">★ 3.8</span>
+                                </a>
+                            </li>
                             <li>
                                 <a>
                                     <span class="img">
@@ -474,22 +377,19 @@ h2 {
                                     <div>
                                         <strong>보험공단</strong>
                                     </div>
-                                     <span class="star">★ 2.8</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-                      </aside>
+                                    <span class="star">★ 2.8</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
             </div>
-            </section>
-                
-            
-            <!-- aside -->
         </main>
 
-          <!-- 푸터 -->
+        <!-- 푸터 -->
         <footer class="footer">
             <p>&copy; 2024 Blind Inc. | <a href="#">개인정보 처리방침</a></p>
         </footer>
+
     </body>
 </html>
