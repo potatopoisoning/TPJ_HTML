@@ -9,75 +9,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
         <style>
 main{
-    background-color: #f6f7fa; 
+    background-color: white; 
 }
 
-/* 회사 배너 */
-.black-section {
-    background-color: #696969 ;
-    /* color: white; */
-    text-align: center;
-    /* padding: 20px 0; */
-    /* margin-bottom: 20px; */
-    overflow: hidden;
-    position: relative;
-    height: 120px;
-    background: url(https://static.teamblind.com/img/www/bg-company.jpg) 50% 0 no-repeat;
-    background-size: cover;
-}
-
-.black-section::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(34, 34, 34, 0.7);
-    content: '';
-}
-
-/* .black-section h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.black-section p {
-    font-size: 18px;
-    margin: 0;
-} */
-
-/* section(왼) + aside(오) */
+/* section */
 .main-container {
-    display: flex;
+    /* display: flex; */
     max-width: 1100px;
     margin: 0 auto;
-    background-color: #f6f7fa;
+    /* background-color: #f6f7fa; */
+}
+
+.free_list-section{
+    max-width: 100%;
+    padding-bottom: 32px;
 }
 
 .free_list {
-    max-width: 800px;
+    width: 100%; /* 수정: 넓이 90%로 설정 */
+    max-width: 1100px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0; /* 카드가 서로 붙어있게 */
     background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    overflow: hidden;
+}
+
+.adv{
+    width: 1100px;
+    padding: 32px 0 32px 0;
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.adv img{
+    max-width: 1060px;
 }
 
 .card {
-    padding: 15px;
-    border-bottom: 1px solid #ddd; /* 아래쪽 경계선 */
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
 }
 
-/* 왼쪽에 있는 카드만 오른쪽 경계선 추가 */
-.card:nth-child(2n-1) {
-    border-right: 1px solid #ddd; /* 오른쪽 경계선 */
+.card:first-child {
+    border-top: 1px solid #ddd;
 }
 
-.card:nth-child(-n+2) {
-    border-top: 1px solid #ddd; /* 위쪽 경계선 */
+.card:hover {
+    background-color: #f9f9f9;
 }
 
 h2 {
@@ -98,6 +79,30 @@ p {
     color: #888;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.pagination a {
+    color: #333;
+    padding: 8px 16px;
+    text-decoration: none;
+    /* border: 1px solid #ddd; */
+    margin: 0 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    font-weight: bold;
+}
+
+.pagination a.active {
+    font-weight: bold;
+}
+
         </style>
     </head>
     <body>
@@ -105,11 +110,11 @@ p {
         <!-- 헤더 -->
         <header>
             <div class="navbar">
-                <div class="logo">Anonym</div>
+                <div class="logo"><a href="cindex.html">Anonym</a></div>
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="#">자유게시판</a></li>
-                        <li><a href="#">기업 리뷰</a></li>
+                        <li><a href="f자유게시판목록_최종.html">자유게시판</a></li>
+                        <li><a href="cindex.html">기업 리뷰</a></li>
                         <li><a href="#">채용 공고</a></li>
                         <li><a href="#">기업 서비스</a></li>
                     </ul>
@@ -126,21 +131,21 @@ p {
         <!-- 메인 -->
         <main>
 
-            <section class="black-section">
-                <!-- <h1>기업 정보 플랫폼</h1>
-                <p>투명한 기업 리뷰와 채용 정보를 제공합니다.</p> -->
-            </section>
-
             <div class="main-container">
                 <section class="free_list-section">
+                    <div class="adv">
+                        <img src="https://d2u3dcdbebyaiu.cloudfront.net/img/web_banner/web_banner_kr_1727835628.png" style="height:100%;">
+                    </div>
                     <div class="free_list">
                         <div class="card">
+                            <a href="f자유게시판글조회_최종.html">
                             <h2>오늘은 비가 와서 산책을 포기했다</h2>
                             <p>비도 오고 날씨도 쌀쌀해서 집에만 있었다. 오랜만에 책 한 권 읽었다.</p>
                             <div class="meta">
                                 <span>김아무개 · 10.21</span>
                                 <span>조회 132 · 댓글 5</span>
                             </div>
+                            </a>
                         </div>
                 
                         <div class="card">
@@ -187,42 +192,15 @@ p {
                                 <span>조회 320 · 댓글 8</span>
                             </div>
                         </div>
-                
-                        <div class="card">
-                            <h2>헬스장에서 생긴 에피소드</h2>
-                            <p>운동하다가 넘어질 뻔해서 민망했다. 다행히 아무도 안 봤다.</p>
-                            <div class="meta">
-                                <span>운동중독자 · 10.21</span>
-                                <span>조회 422 · 댓글 11</span>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <h2>영화 감상 후기: 인셉션</h2>
-                            <p>머리 아픈 영화였지만 생각할수록 재밌다. 꼭 다시 봐야겠다.</p>
-                            <div class="meta">
-                                <span>이영화 · 10.21</span>
-                                <span>조회 518 · 댓글 15</span>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <h2>내일의 계획</h2>
-                            <p>내일은 운동도 하고, 카페에서 책도 읽을 예정이다. 알찬 하루가 될 듯!</p>
-                            <div class="meta">
-                                <span>미래계획자 · 10.21</span>
-                                <span>조회 215 · 댓글 4</span>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <h2>오늘의 요리: 파스타</h2>
-                            <p>집에서 파스타를 처음 만들어봤는데 성공적이었다!</p>
-                            <div class="meta">
-                                <span>요리사 · 10.21</span>
-                                <span>조회 332 · 댓글 9</span>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a href="#">&laquo;</a> <!-- 이전 페이지 -->
+                        <a href="#" class="active">1</a> <!-- 현재 페이지 -->
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">&raquo;</a> <!-- 다음 페이지 -->
                     </div>
                 </section>
             </div>

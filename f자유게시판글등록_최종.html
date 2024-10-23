@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonym</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="dhstyles.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <style>
+main{
+    /* background-color: #f6f7fa;  */
+}
+
+/* section(왼) + aside(오) */
+.main-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* background-color: #f6f7fa; */
+}
+
+/* section(왼) */
+.free-form-section {
+    margin-bottom: 30px;
+    flex: 3;
+    margin-right: 20px;
+}
+
+.free-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 400px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #da3238;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* aside(오) */
+.rcmd_list h2 {
+    /* padding: 16px 18px 5px; */
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.rcmd_list {
+    margin: 30px 0 30px 0;
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 22px 23px;
+}
+
+.rcmd_list a:before {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    content: '';
+    background: #fb5757;
+}
+
+.rcmd_list a:first-of-type {
+    margin-top: 17px;
+}
+
+.rcmd_list a {
+    display: block;
+    position: relative;
+    margin-top: 11px;
+    padding-left: 14px;
+    font-size: 14px;
+    line-height: 1.43em;
+    text-decoration: none;
+    color: black;
+}
+        </style>
+    </head>
+    <body>
+
+        <!-- 헤더 -->
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="cindex.html">Anonym</a></div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="f자유게시판목록_최종.html">자유게시판</a></li>
+                        <li><a href="cindex.html">기업 리뷰</a></li>
+                        <li><a href="#">채용 공고</a></li>
+                        <li><a href="#">기업 서비스</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </header>
+
+        <!-- 메인 -->
+        <main>
+            <div class="main-container">
+                <section class="free-form-section">
+                    <div class="free-form">
+                        <h2>글 작성</h2>
+                    
+                        <form action="#" method="POST">
+                    
+                            <!-- 제목 입력 -->
+                            <div class="form-group">
+                                <label for="review-title">제목</label>
+                                <input type="text" id="review-title" name="review_title" placeholder="제목을 입력하세요" required />
+                            </div>
+                            
+                            <!-- 단점 입력 -->
+                            <div class="form-group">
+                                <label for="disadvantages">내용</label>
+                                <textarea id="disadvantages" name="disadvantages" placeholder="내용을 작성하세요" required></textarea>
+                            </div>
+                    
+                            <button type="submit" class="submit-btn">작성하기</button>
+                        </form>
+                    </div>
+                </section>
+                <!-- aside -->
+                <aside class="sidebar">
+                    <section class="rcmd_list">
+                        <h2>추천 글</h2>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            <a href="#">
+                                런닝 좋아하시는 분들
+                            </a>
+                            
+                    </section>
+                </aside>
+            </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <p>&copy; 2024 Blind Inc. | <a href="#">개인정보 처리방침</a></p>
+        </footer>
+
+    </body>
+</html>
